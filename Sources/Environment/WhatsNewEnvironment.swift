@@ -3,6 +3,7 @@ import Foundation
 // MARK: - WhatsNewEnvironment
 
 /// A WhatsNew Environment
+
 open class WhatsNewEnvironment {
     
     // MARK: Properties
@@ -83,6 +84,7 @@ open class WhatsNewEnvironment {
     // MARK: WhatsNew
     
     /// Retrieve a WhatsNew that should be presented to the user, if available.
+	@MainActor
     open func whatsNew() -> WhatsNew? {
         // Retrieve presented WhatsNew Versions from WhatsNewVersionStore
         let presentedWhatsNewVersions = self.whatsNewVersionStore.presentedVersions
